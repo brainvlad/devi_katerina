@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: #fff;
+}
+.header__logo {
+}
+.header__menu {
+    font-size: 20px;
+}
+.header__list {
+    display: flex;
+    gap: 40px;
+}
+.header__item {
+    list-style-type: none;
+    cursor: pointer;
+}
+.header__search {
+    display: flex;
+    align-items: center;
+}
+.header__search input {
+    background-color: transparent;
+    outline: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    margin-right: -25px;
+    color: #fff;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 400px;
+    color: #fff;
+}
+.footer__item {
+    cursor: pointer;
+}
+
+.main {
+    background-color: #101010;
+}
+
+.parallax {
+    position: relative;
+    height: 100%;
+}
+.parallax__item {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__item_1 {
+    background: url(../img/wave-1.svg) 0 90% / cover no-repeat;
+}
+.parallax__item_2 {
+    z-index: 2;
+    background: url(../img/wave-2.svg) 0 60% / cover no-repeat;
+    transform: translate3d(0px, 0px, 0px) scale(-1);
+}
+.parallax__item_3 {
+    background: url(../img/wave-3.svg) 0 50% / cover no-repeat;
+    z-index: 4;
+    transform: translate3d(0px, 0px, 0px) scale(-1);
+}
+
+
+.content {
+    max-width: 1180px;
+    margin: auto;
+    position: relative;
+    color: #fefefe;
+    height: 100vh;
+    text-align: right;
+}
+.content h1 {
+    font-size: 82px;
+    line-height: 100vh;
+    text-shadow: 0 0 1px #ffffff48, 0 0 10px #ffffff48, 0 0 20px #ffffff48, 0 0 40px #0000ff50, 0 0 80px #0000ff50, 0 0 90px #0000ff50, 0 0 50px #0000ff50, 0 0 100px #0000ff50;
+}
+
+.fishes {
+    position: fixed;
+    top: 20%;
+    z-index: 3;
+
+
+}
+.fish-1 {
+    position: absolute;
+    top: -20%;
+    left: 20%;
+
+    animation-name: fish;
+    animation-duration: 7s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+ 
+}
+.fish-2 {
+    position: absolute;
+    top: 80%;
+    left: -20%;
+
+    animation-name: fish;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.fish-3 {
+    /* position: absolute; */
+    top: 80%;
+    left: -50%;
+    margin-left: -100px;
+
+    animation-name: fish;
+    animation-duration: 10s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fish {
+    from {
+        transform: translateX(50px) translateY(-30px) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0px) translateY(0px) scale(0.9) rotate(3deg);
+    }
+    to {
+        transform: translateX(50px) translateY(-30px) scale(1) rotate(0deg);
+    }
+}
