@@ -30,11 +30,11 @@ body {
 }
 .header__list {
     display: flex;
-    gap: 40px;
 }
 .header__item {
     list-style-type: none;
     cursor: pointer;
+    margin: 0 20px;
 }
 .header__search {
     display: flex;
