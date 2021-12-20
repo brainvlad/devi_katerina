@@ -1,0 +1,62 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 1001;
+}
+  
+.prelodaer__block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.preloader__img {
+    filter: invert();
+}
+.preloader__img img {
+    width: 100px;
+    height: 100px;
+}
+.preloader__circle {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 0;
+
+    animation-name: circle;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+#circle-2 {
+    animation-delay: 1.5s;
+}
+@keyframes circle {
+    from{
+        opacity: 0;
+        transform: translate(130px, 0px);
+    }
+    50% {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translate(-65px, 0px);
+    }
+}
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
